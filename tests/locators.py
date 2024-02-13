@@ -50,16 +50,13 @@ class TestLocators:
     BUTTON_FOR_RECOVERY = By.XPATH, './/button[ text() = "Восстановить"]'
 
     # кнопка Войти на 1-й странице восстановления пароля
-    BUTTON_LOGIN_FOR_RECOVERY_FORGOT = By.XPATH, './/a[text() = "Войти"]'
-
-    # кнопка Войти на 2-й странице восстановления пароля
-    BUTTON_LOGIN_FOR_RECOVERY_RESET = By.XPATH, './/a[text() = "Войти"]'
+    BUTTON_LOGIN_FOR_RECOVERY = By.XPATH, './/a[text() = "Войти"]'
 
     # кнопка Выйти на странице профиля
     BUTTON_EXIT = By.XPATH, ".//button[text() = 'Выход']"
 
     # кнопка конструктор
-    BUTTON_KONSTRUCROT = By.XPATH, './/p[text() = "Конструктор"]'
+    BUTTON_CONSTRUCTOR = By.XPATH, './/p[text() = "Конструктор"]'
 
     # кнопка Оформить заказ
     BUTTON_CHECKOUT = By.XPATH, './/button[text() = "Оформить заказ"]'
@@ -67,20 +64,20 @@ class TestLocators:
     # поле ввода пароля на странице восстановления пароля
     PASSWORD_FOR_RESET = By.XPATH, './/input[@type = "password"]'
 
-    #
+    # кнопка Начинки
     FILINGS_BUTTON = By.XPATH, './/span[text() = "Начинки"]'
 
-    #
+    # наименование раздела Начинки
     FILINGS_CONTENT = By.XPATH, './/h2[text() = "Начинки"]'
 
-    #
+    # кнопка Соусы
     SAUCES_BUTTON = By.XPATH, './/span[text() = "Соусы"]'
 
-    #
+    # наименование раздела Соусы
     SAUCES_CONTENT = By.XPATH, './/h2[text() = "Соусы"]'
 
-    #
+    # кнопка Булки
     BUNS_BUTTON = By.XPATH, './/span[text() = "Булки"]'
 
-    #
+    # наименование раздела Булки
     BUNS_CONTENT = By.XPATH, './/h2[text() = "Булки"]'

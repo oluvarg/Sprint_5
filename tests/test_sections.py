@@ -18,8 +18,6 @@ class TestSection:
 
         assert 'Начинки' in name_fillings.text, 'Не удалось перейти в раздел "Начинки"'
 
-        driver.quit()
-
     def test_sauces(self, driver):
 
         driver.get('https://stellarburgers.nomoreparties.site/')
@@ -32,8 +30,6 @@ class TestSection:
         name_sauces = driver.find_element(*TestLocators.SAUCES_CONTENT)
 
         assert 'Соусы' in name_sauces.text, 'Не удалось перейти в раздел "Соусы"'
-
-        driver.quit()
 
     def test_buns(self, driver):
 
@@ -50,5 +46,3 @@ class TestSection:
         name_buns = driver.find_element(*TestLocators.BUNS_CONTENT)
 
         assert 'Булки' in name_buns.text, 'Не удалось перейти в раздел "Булки"'
-
-        driver.quit()

@@ -15,14 +15,19 @@ class TestJumpPage:
 
         assert '/account/profile' in current_profile_url, 'Не перейти на страницу профиля'
 
-        wait.until(expected_conditions.visibility_of_element_located(TestLocators.BUTTON_KONSTRUCROT))
-        driver.find_element(*TestLocators.BUTTON_KONSTRUCROT).click()
+    def test_jump_constructor(self, driver, login_user):
+        wait = WebDriverWait(driver, 5)
+        wait.until(expected_conditions.visibility_of_element_located(TestLocators.BUTTON_CONSTRUCTOR))
+        driver.find_element(*TestLocators.BUTTON_CONSTRUCTOR).click()
 
         wait.until(expected_conditions.visibility_of_element_located(TestLocators.BUTTON_CHECKOUT))
-        current_logo_url = driver.current_url
+        current_main_paige_url = driver.current_url
 
-        assert 'https://stellarburgers.nomoreparties.site/' in current_logo_url, 'Не перейти на страницу конструктора'
+        assert 'https://stellarburgers.nomoreparties.site/' in current_main_paige_url, ('Не перейти на страницу '
+                                                                                        'конструктора')
 
+    def test_logout(self, driver, login_user):
+        wait = WebDriverWait(driver, 5)
         wait.until(expected_conditions.visibility_of_element_located(TestLocators.BUTTON_PROFILE))
         driver.find_element(*TestLocators.BUTTON_PROFILE).click()
         wait.until(expected_conditions.visibility_of_element_located(TestLocators.BUTTON_EXIT))
@@ -33,6 +38,4 @@ class TestJumpPage:
         wait.until(expected_conditions.visibility_of_element_located(TestLocators.EMAIL_FOR_LOGIN))
         current_profile_url = driver.current_url
 
-        driver.quit()
-
-        assert '/account/profile' not in current_profile_url, 'Не перейти на страницу профиля'
+        assert '/account/profile' not in current_profile_url, 'Не удалось выйти'
