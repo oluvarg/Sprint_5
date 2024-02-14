@@ -3,7 +3,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-class TestLogin(TestLocators):
+class TestLogin:
 
     def test_login_main_paige(self, driver, user_creds):
         driver.get('https://stellarburgers.nomoreparties.site/')
